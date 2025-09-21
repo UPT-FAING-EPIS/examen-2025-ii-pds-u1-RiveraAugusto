@@ -3,7 +3,7 @@
 variable "gcp_project_id" {
   description = "El ID del proyecto de Google Cloud."
   type        = string
-  default     = "examen-calidad-augusto"
+  default     = "examen-patrones-augusto"
 }
 
 variable "gcp_region" {
@@ -15,7 +15,7 @@ variable "gcp_region" {
 variable "database_names" {
   description = "Una lista de nombres para las bases de datos a crear."
   type        = list(string)
-  default     = ["calidad_bd_examen"]
+  default     = ["patrones_bd_examen"]
 }
 
 variable "db_user_name" {
