@@ -169,3 +169,5 @@ C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds
 C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Tests\obj\Debug\net8.0\CellphoneInventory.Tests.pdb
 C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Tests\obj\Debug\net8.0\CellphoneInventory.Tests.genruntimeconfig.cache
 C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Tests\obj\Debug\net8.0\ref\CellphoneInventory.Tests.dll
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Tests\bin\Debug\net8.0\MySqlConnector.dll
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Tests\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
