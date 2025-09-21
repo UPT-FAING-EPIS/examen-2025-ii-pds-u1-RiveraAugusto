@@ -1,0 +1,67 @@
+name: 'Deploy Application'
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+
+jobs:
+  deploy-backend:
+    name: 'Deploy Backend'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
+          
+      - name: Build and Publish
+        run: |
+          dotnet restore src/backend/CellphoneInventory.API/CellphoneInventory.API.csproj
+          dotnet publish src/backend/CellphoneInventory.API/CellphoneInventory.API.csproj -c Release -o publish
+          
+      - name: Deploy to Google Cloud Run
+        uses: google-github-actions/deploy-cloudrun@v1
+        with:
+          service: cellphone-inventory-api
+          region: us-central1
+          source: ./publish
+          credentials: ${{ secrets.GCP_SA_KEY }}
+          
+  deploy-frontend:
+    name: 'Deploy Frontend'
+    runs-on: ubuntu-latest
+    needs: deploy-backend
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install Dependencies
+        run: |
+          cd src/frontend
+          npm install
+          
+      - name: Build
+        run: |
+          cd src/frontend
+          npm run build
+          
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          channelId: live
+          projectId: cellphone-inventory

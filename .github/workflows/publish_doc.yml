@@ -1,0 +1,39 @@
+name: 'Publish Documentation'
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'src/**'
+
+jobs:
+  publish-docs:
+    name: 'Publish Documentation to GitHub Pages'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
+          
+      - name: Install DocFX
+        run: dotnet tool install -g docfx
+        
+      - name: Generate Documentation
+        run: |
+          mkdir -p docs/api
+          docfx init -q -o docs/docfx
+          cp docs/docfx/docfx.json docs/
+          docfx docs/docfx.json
+          
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/_site

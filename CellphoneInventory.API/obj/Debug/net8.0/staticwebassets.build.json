@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "GSCgTjpBNUUEZ+4ZhrUeTzQXJkiusVOzDSrPFTLWZYw=",
+  "Source": "CellphoneInventory.API",
+  "BasePath": "_content/CellphoneInventory.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

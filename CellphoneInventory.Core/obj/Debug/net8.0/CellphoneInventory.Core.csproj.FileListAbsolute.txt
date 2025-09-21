@@ -1,0 +1,12 @@
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Core\bin\Debug\net8.0\CellphoneInventory.Core.deps.json
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Core\bin\Debug\net8.0\CellphoneInventory.Core.dll
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Core\bin\Debug\net8.0\CellphoneInventory.Core.pdb
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Core\obj\Debug\net8.0\CellphoneInventory.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Core\obj\Debug\net8.0\CellphoneInventory.Core.AssemblyInfoInputs.cache
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Core\obj\Debug\net8.0\CellphoneInventory.Core.AssemblyInfo.cs
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Core\obj\Debug\net8.0\CellphoneInventory.Core.csproj.CoreCompileInputs.cache
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Core\obj\Debug\net8.0\CellphoneInventory.Core.sourcelink.json
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Core\obj\Debug\net8.0\CellphoneInventory.Core.dll
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Core\obj\Debug\net8.0\refint\CellphoneInventory.Core.dll
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Core\obj\Debug\net8.0\CellphoneInventory.Core.pdb
+C:\Users\acer\OneDrive\Escritorio\2025\2025-2\Patrones\Examen\examen-2025-ii-pds-u1-RiveraAugusto\CellphoneInventory.Core\obj\Debug\net8.0\ref\CellphoneInventory.Core.dll

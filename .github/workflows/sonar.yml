@@ -1,0 +1,47 @@
+name: 'SonarQube Analysis'
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  sonarqube-analysis:
+    name: 'SonarQube Analysis'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
+          
+      - name: Install SonarScanner
+        run: dotnet tool install --global dotnet-sonarscanner
+        
+      - name: Begin SonarQube Analysis
+        run: |
+          dotnet sonarscanner begin \
+            /k:"cellphone-inventory" \
+            /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}" \
+            /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
+            /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" \
+            /d:sonar.coverage.exclusions="**Tests.cs" \
+            /d:sonar.qualitygate.wait=true
+            
+      - name: Build and Test
+        run: |
+          dotnet build src/backend/CellphoneInventory.sln
+          dotnet test src/backend/CellphoneInventory.Tests/CellphoneInventory.Tests.csproj \
+            /p:CollectCoverage=true \
+            /p:CoverletOutputFormat=opencover
+            
+      - name: End SonarQube Analysis
+        run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

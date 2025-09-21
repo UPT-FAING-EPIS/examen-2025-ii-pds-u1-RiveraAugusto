@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CellphoneInventory.Core/1.0.0": {
+        "runtime": {
+          "CellphoneInventory.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CellphoneInventory.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
